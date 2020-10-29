@@ -13,7 +13,8 @@
     "test:nosmoke": ".\\node_modules\\.bin\\nightwatch.cmd --skiptags smoke,404",
     "test:busca": ".\\node_modules\\.bin\\nightwatch.cmd --group busca",
     "test:cadastro": ".\\node_modules\\.bin\\nightwatch.cmd --group cadastro",
-    "test": ".\\node_modules\\.bin\\nightwatch.cmd"
+    "test": ".\\node_modules\\.bin\\nightwatch.cmd",
+    "test:ci": "./node_modules/.bin/nightwatch --tag smoke --env=headless"
   },
   "keywords": [
     "qaninja",
