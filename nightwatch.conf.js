@@ -64,6 +64,9 @@ module.exports = {
       }
     },
 
+    //args: ['--headless', '--no-sandbox', '--disable-dev-shm-usage'] 
+    //--disable-dev-shm-usage em vez de usar memoria flash, grava a memoria em disco para o navegador. Deixa de usar a memoria do container para gravar o cache na pasta temporaria do disco.
+
     firefox: {
       launch_url: testUrl,
       globals: {
