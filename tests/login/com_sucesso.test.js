@@ -8,6 +8,7 @@ module.exports ={
 
         login.with('zumbi@dospalmares.com.br','pwd123')
         siderbar.expectedLoggedUser("Quilombo")
+
     },
     
     // 'dado que eu acesso a página de login': function(browser){
