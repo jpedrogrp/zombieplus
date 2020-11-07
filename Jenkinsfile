@@ -1,6 +1,9 @@
 pipeline{
     agent {
-        docker {image "jpedrogrp/node-wd"}
+        docker {
+            image "jpedrogrp/node-wd"
+            args "--network=skynet"
+        }
     }
     stages {
         stage('Build'){
