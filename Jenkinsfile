@@ -1,6 +1,6 @@
 pipeline{
     agent {
-        docker {image "node"}
+        docker {image "jpedrogrp/node-wd"}
     }
     stages {
         stage('Build'){
