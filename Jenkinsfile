@@ -14,9 +14,16 @@ pipeline{
         stage("Test"){
             steps{
                 sh "npm run test:ci"
-                junit testResults: "tests_output/**/*.xml"
+            }
+            post {
+                // aborted
+                // failure
+                // success
+                // changed 
+                always{
+                    junit testResults: "tests_output/**/*.xml"
+                }
             }
         }
-    }
-    
+    }  
 }
