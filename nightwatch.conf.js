@@ -24,13 +24,20 @@ module.exports = {
   //   workers:4,
   // },
 
+  screenshots: {
+    enabled: true,
+    on_failure: true,
+    on_error: true,
+    path: 'tests_output/'
+  },
+
   test_settings: {
     default: {
       launch_url: testUrl,
-      globals:{
+      globals: {
         waitForConditionTimout: defaultTimeout // as vezes internet ou rede fica lenta
       },
-      webdriver:{
+      webdriver: {
         server_path: chromedriver.path,
         port: 9515,
       },
@@ -39,30 +46,30 @@ module.exports = {
       }
     },
 
-    headless:{
+    headless: {
       launch_url: testUrl,
-      globals:{
+      globals: {
         waitForConditionTimout: defaultTimeout // as vezes internet ou rede fica lenta
       },
-      webdriver:{
+      webdriver: {
         server_path: chromedriver.path,
         port: 9515,
       },
       desiredCapabilities: {
         browserName: "chrome",
-        chromeOptions:{
-          w3c:false,
-          args:['--headless', '--no-sandbox']
+        chromeOptions: {
+          w3c: false,
+          args: ['--headless', '--no-sandbox']
         }
       }
     },
 
-    firefox:{
+    firefox: {
       launch_url: testUrl,
-      globals:{
+      globals: {
         waitForConditionTimout: defaultTimeout // as vezes internet ou rede fica lenta
       },
-      webdriver:{
+      webdriver: {
         server_path: '.\\node_modules\\.bin\\geckodriver.cmd',
         port: 4444,
       },
@@ -72,7 +79,7 @@ module.exports = {
       }
     },
 
-    stage:{
+    stage: {
       launch_url: "http://stage.zombieplus.com.br",
     },
   }
